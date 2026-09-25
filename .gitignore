@@ -1,0 +1,67 @@
+
+# ========== 敏感配置（含密码，绝不上传）==========
+config.py
+config_local.py
+.env
+.env.local
+*_secret.py
+secrets.json
+credentials.json
+
+# ========== 数据文件（体积大，绝不入库）==========
+data/raw/*
+data/interim/*
+data/processed/*
+data/*.duckdb
+data/*.duckdb.wal
+data/*.parquet
+# 保留目录结构，但忽略内容
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# ========== 虚拟环境 ==========
+.venv/
+venv/
+env/
+ENV/
+
+# ========== Python 缓存与编译产物 ==========
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ========== Jupyter Notebook 检查点 ==========
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ========== PyCharm / IDEA ==========
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ========== 日志与临时文件 ==========
+reports/tables/*_运行日志.txt
+*.log
+logs/
+tmp/
+*.tmp
+*.bak
+
+# ========== 系统文件 ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# ========== 编辑器杂项 ==========
+*.swp
+*~

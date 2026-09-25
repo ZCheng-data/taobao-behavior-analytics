@@ -1,0 +1,27 @@
+# 淘宝用户行为分析 —— 依赖清单
+# 安装：pip install -r requirements.txt
+# 环境：Python 3.12+
+
+# ---------- 核心分析引擎（OLAP）----------
+# 流式扫描 1225 万行 CSV、列式存储、窗口函数、DID 回归斜率
+duckdb>=1.1.0
+
+# ---------- 数据处理 ----------
+# 结果表整理、透视、导出
+pandas>=2.2.0
+numpy>=1.26.0
+# Parquet 列存读写（清洗后 507 MB → 124 MB）
+pyarrow>=17.0.0
+
+# ---------- 数据库连接（聚合结果写入 MySQL）----------
+sqlalchemy>=2.0.30
+# MySQL 驱动，SQLAlchemy 连接串 mysql+pymysql:// 使用
+pymysql>=1.1.0
+
+# ---------- 统计检验（DID 显著性）----------
+# t 检验、95% 置信区间、MAD 稳健 z 分数
+scipy>=1.14.0
+
+# ---------- 结果导出 ----------
+# pandas.to_excel 写 .xlsx 的引擎
+openpyxl>=3.1.2
